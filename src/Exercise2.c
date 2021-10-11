@@ -17,23 +17,23 @@ ______________________________________
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	int n = atoi(argv[1]);
-	int result;
+	int result = 1;
 	//Your codes here
-	//if input n is odd	
+	// if input n is odd	 
 	if(n % 2 != 0) {		
 		for(int i = 1; i <= n; i += 2){
 			result = result * i;
 		}
 	}
 	//if input n is even
-	else if(n % 2 == 0) {
+	else{
 		for(int j = 2; j <= n; j += 2){
 			result = result * j;
 		}
 	}
 	printf("%d", result);
 	return 0;
+	
+
 }
-	printf("%d", result);
-	return 0;
-}
+
