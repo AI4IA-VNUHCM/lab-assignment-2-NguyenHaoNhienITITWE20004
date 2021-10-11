@@ -8,9 +8,17 @@ Ex:
 |____________________________________|
 */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+void swap(int *arr, int i, int j)
+{
+	int store = arr[i];
+	arr[i] = arr[j];
+	arr[j] = store;
+}
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
@@ -43,4 +51,3 @@ int main(int argc, char *argv[]) {
 	}
 	return 0;
 }
-	
