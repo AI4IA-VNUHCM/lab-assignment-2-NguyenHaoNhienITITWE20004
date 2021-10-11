@@ -15,7 +15,6 @@ ______________________________________
 #include <math.h>
 
 int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
 	int n = atoi(argv[1]);
 	int result = 1;
 	//Your codes here
@@ -31,9 +30,8 @@ int main(int argc, char *argv[]) {
 			result = result * j;
 		}
 	}
-	printf("%d", result);
+	printf("%d", result); 
 	return 0;
-	
+
 
 }
-
