@@ -19,18 +19,22 @@ int main(int argc, char *argv[]) {
 	float distance = atof(argv[1]);
 	int result;
 	//Your codes here
-   if(distance <= 2)
-    {   
-        result = 15000 ; 
-    }
-    else if(distance <= 30 && distance > 2)
+float cost;
+    float n = 0;
+
+    scanf("%f", &cost);
+    if(cost <= 1)
     {
-        result = (distance - 2)*8000 + 15000;
+        n =  15000;
+    }
+    else if(cost <= 30 && cost > 1)
+    {
+        n = (cost - 1)*4000 + 1*5000;
     }
     else
     {
-        result = 15000 + 28*8000 + (distance - 30)*5000;
+        n = 15000 + 28*8000 + (cost - 30)*5000;
     }
-	printf("%d", result);
+    printf("\nthe amount of money to be paid: %0.3f VND", n);
 	return 0;
 }
