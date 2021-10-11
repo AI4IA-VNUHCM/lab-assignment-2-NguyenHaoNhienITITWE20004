@@ -16,7 +16,7 @@ ______________________________________
 
 int main(int argc, char *argv[]) {
 	int n = atoi(argv[1]);
-	int result = 1;
+	long result = 1;
 	//Your codes here
 	// if input n is odd	 
 	if(n % 2 != 0) {		
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 			result = result * j;
 		}
 	}
-	printf("%d", result); 
+	printf("%ld", result); 
 	return 0;
 
 
