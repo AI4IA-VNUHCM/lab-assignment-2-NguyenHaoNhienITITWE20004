@@ -9,29 +9,27 @@ ______________________________________
 | Output: 10395                      |
 |____________________________________|
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 int main(int argc, char *argv[]) {
+	//testing variable, applying it to your algorithm for auto-evaluating
 	int n = atoi(argv[1]);
-	long result = 1;
+	int result = 1;
 	//Your codes here
-	// if input n is odd	 
+	//n is odd	
 	if(n % 2 != 0) {		
 		for(int i = 1; i <= n; i += 2){
 			result = result * i;
 		}
 	}
-	//if input n is even
-	else{
+	//n is even
+	else if(n % 2 == 0) {
 		for(int j = 2; j <= n; j += 2){
 			result = result * j;
 		}
 	}
-	printf("%ld", result); 
+	printf("%d", result);
 	return 0;
-
-
 }
