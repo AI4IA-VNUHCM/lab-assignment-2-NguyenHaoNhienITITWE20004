@@ -10,6 +10,7 @@ ______________________________________
 |____________________________________|
 */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -19,7 +20,17 @@ int main(int argc, char *argv[]) {
 	float distance = atof(argv[1]);
 	int result;
 	//Your codes here
-	
+	//a
+	if(distance <=2) result = 15000;
+	//b
+	else if(distance > 2 && distance < 30){
+		result = 15000 + (distance - 2)*2000*4;
+	}
+	//c
+	else if(distance >= 30){
+		result = 15000 + (distance - 30) * 5000 +(distance - 2 -(distance-30))*2000*4;
+	}
+
 	printf("%d", result);
 	return 0;
 }
