@@ -10,6 +10,7 @@ ______________________________________
 |____________________________________|
 */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -19,22 +20,17 @@ int main(int argc, char *argv[]) {
 	float distance = atof(argv[1]);
 	int result;
 	//Your codes here
-float cost;
-    float n = 0;
+	//a
+	if(distance <=2) result = 15000;
+	//b
+	else if(distance > 2 && distance < 30){
+		result = 15000 + (distance - 2)*2000*4;
+	}
+	//c
+	else if(distance >= 30){
+		result = 15000 + (distance - 30) * 5000 +(distance - 2 -(distance-30))*2000*4;
+	}
 
-    scanf("%f", &cost);
-    if(cost <= 1)
-    {
-        n =  15000;
-    }
-    else if(cost <= 30 && cost > 1)
-    {
-        n = (cost - 1)*4000 + 1*5000;
-    }
-    else
-    {
-        n = 15000 + 28*8000 + (cost - 30)*5000;
-    }
-    printf("\nthe amount of money to be paid: %0.3f VND", n);
+	printf("%d", result);
 	return 0;
 }
